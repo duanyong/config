@@ -1,0 +1,42 @@
+# ~/.gitconfig
+
+[user]
+	name 	= duanyong
+	email 	= coderduan@gmail.com
+
+[color]
+    ui      = auto
+    log     = auto
+	diff 	= auto
+	branch 	= auto
+	status 	= auto
+
+#[color "branch"]
+#    local   = yellow
+#    remote  = green
+#    current = yellow reverse
+
+#[color "diff"]
+#    old     = red bold
+#    new     = green bold
+#    meta    = yellow bold
+#    frag    = magenta bold
+
+#[color "status"]
+#    added       = yellow
+#    changed     = green
+#    untracked   = cyan
+
+[alias]
+    ls      = ls-files
+    st      = status
+    ci      = commit
+    br      = branch
+    co      = checkout
+    df      = diff
+    dc      = diff --cached
+#    lg      = log -p
+#    lol     = log --graph --decorate --pretty=oneline --abbrev-commit
+#    lola    = log --graph --decorate --pretty=oneline --abbrev-commit --all
+#    # Show files ignored by git:
+#    ign     = ls-files -o -i --exclude-standard

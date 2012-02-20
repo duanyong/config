@@ -1,0 +1,25 @@
+# 本文件是mac下个人配置文件（~/.profile）
+
+
+# ====================== start ======================
+# 1) 修改默认的主机名
+#System Preference => Sharing => Computer Name: MacPro
+
+
+# ====================== end ======================
+
+
+#修改默认的终端提示符 duanyong@MacPro:/tmp$
+export PS1='\u@\h:\w\$'
+
+
+#终端添加颜色
+export CLICOLOR="xterm-color"
+export LSCOLORS="bxfxaxdxcxegedabagacad"
+
+
+#别名
+alias l='ls -G'
+alias ls='l'
+alias ll='ls -l'
+alias la='ls -al'
