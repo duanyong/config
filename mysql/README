@@ -1,0 +1,7 @@
+mac:
+    1) /usr/local/mysql
+    2) sudo ln -s /usr/local/mysql/support-files/mysql.server /usr/local/mysql/bin/mysql.server
+    3) mysql.server start) restart) stop
+    4) mysql -uroot -pa;
+    5) 将mysql pid-file放置到/var/run/mysql/mysql.pid
+    5) sudo cp /usr/local/mysql/support-files/my-large.cnf /etc/my.cnf

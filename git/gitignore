@@ -1,0 +1,22 @@
+# 目录：~/procjet/.gitignore
+# 所有类型（包括linux, OSX系统的git忽略文件）https://github.com/github/gitignore.git
+
+.gitignore
+.*
+*~
+
+*.swo
+*.swp
+
+?.php
+?.tpl
+
+*.html
+*.shtml
+
+# aa.js, cc.css
+*.js
+*.css
+!dev.*.js
+!dev.*.css
+

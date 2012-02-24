@@ -1,0 +1,5 @@
+./configure 
+    \--prefix=/usr/local/nginx 
+    \--with-pcre 
+    \--without-http_uwsgi_module 
+    \--without-http_scgi_module

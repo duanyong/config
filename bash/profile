@@ -9,8 +9,14 @@
 # ====================== end ======================
 
 
+#添加/opt/local/bin目录
+export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+
+#添加/opt/local/nginx/sbin目录
+#export PATH=/usr/local/nginx/sbin:$PATH
+
 #修改默认的终端提示符 duanyong@MacPro:/tmp$
-export PS1='\u@\h:\w\$'
+export PS1='\u@\h:\w\$ '
 
 
 #终端添加颜色
@@ -20,6 +26,6 @@ export LSCOLORS="bxfxaxdxcxegedabagacad"
 
 #别名
 alias l='ls -G'
-alias ls='l'
 alias ll='ls -l'
 alias la='ls -al'
+

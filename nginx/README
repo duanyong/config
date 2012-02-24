@@ -1,0 +1,8 @@
+#configure about nginx on OS 
+
+    1) 在/usr/local/nginx/conf/nginx.conf中
+        pid     /var/run/nginx.pid;
+        http
+            include     sites-enabled/*.conf;
+
+
