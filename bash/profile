@@ -12,8 +12,8 @@
 #添加/opt/local/bin目录
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 
-#添加/opt/local/nginx/sbin目录
-#export PATH=/usr/local/nginx/sbin:$PATH
+#添加/usr/local/nginx/sbin目录
+export PATH=/usr/local/nginx/sbin:$PATH
 
 #修改默认的终端提示符 duanyong@MacPro:/tmp$
 export PS1='\u@\h:\w\$ '
@@ -28,4 +28,5 @@ export LSCOLORS="bxfxaxdxcxegedabagacad"
 alias l='ls -G'
 alias ll='ls -l'
 alias la='ls -al'
+alias lh='ll -h'
 

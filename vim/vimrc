@@ -1,58 +1,103 @@
 "   mac系统目录: ~/.vimrc
 " linux系统目录: ~/.vim/vimrc
+"
+"
+" 注意事项：
+"   1、如文件打开后光标不在关闭之前的行数，查看~/.viminfo的权限是600且属于当前用户
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Config Basics
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 function s:basic_config()
-	" 侦测文件类型载入对应的语法及缩进
-	syntax on
-	filetype on
-	filetype plugin on
-	filetype indent on
+    "全局设置（判断操作系统）
+    if (has("win32") || has("win64") || has("win32unix"))
+        let g:isWin = 1
+    else
+        let g:isWin = 0
+    endif
 
-	colorscheme default
+    "全局设置（判断VIM所在环境）
+    if has("gui_running")
+        let g:isGUI = 1
+    else
+        let g:isGUI = 0
+    endif
 
-	set nocompatible
-	set noerrorbells	"关闭错误声音
-	set number
-	set ruler
-	set wildmenu
-	set wildmode=list:longest
-
-	" set hlsearch  " 不高亮搜索的条目
-	set incsearch
-	set ignorecase
-
-   	set wrap		"自动换行
-	set linebreak
-	set nobackup
-	set showmatch
-	set cmdheight=1
-
-	set smartindent
-	set autochdir		"文件目录设置为当前目录
-	set autoindent
-	set expandtab		"replace tab with space
-	set smarttab		"easy when ou use backspace
-	set tabstop=4		"删除可以连续删除4个空格
-	set shiftwidth=4
-	set numberwidth=4
-	set backspace=2
-
-	set fileencoding=utf-8
-	set fileencodings=utf-8,bgk
-	set fileformat=unix
-	set fileformats=unix,dos,mac
-
-	"ctrl + o 标签打开文件
-	nmap <C-o> :tabnew 
+    "全局设置（光标复位）
+    if has("autocmd")
+        au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+    endif
 
 
-	"tab和Shift tab要标模式下切换标签
-	nmap <Tab> :tabn<CR>
-	nmap <S-Tab> :tabp<CR>
+    syntax on
+    filetype indent plugin on
+    set linebreak                   "在单词处断行
+    set showmatch                   "显示匹配的括号
+    set whichwrap+=>,<,h,l          "添加h,l可以无聊移动
+    set backspace=indent,eol,start  "删除键只在插入模式有用
+
+    " 配色主题
+    "set background=drak     "设置背景
+    colorscheme desert      "采用配色主题
+
+    " 文件相关
+    set history=50          "命令的历史记录
+    set autoread            "文件在外部修改，自动加载
+    set autochdir		    "文件目录设置为当前目录
+    set ambiwidth=double    "开启特殊字符宽字符显示
+    "set fileformat=unix
+    "set fileencoding=utf-8
+    set fileformats=unix,dos,mac    "支持所有文件系统
+    set fileencodings=utf-8,bgk     "采用编码
+    set viminfo='10,\"100,:20,%,n~/.viminfo " 恢复上次文件打开位置
+    au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
+
+    " 禁用错误发声
+    set noerrorbells	"关闭错误声音
+    set novisualbell	"关闭错误声音
+    set nocompatible    "禁用兼容模式
+
+    "set hlsearch       "不高亮搜索的条目
+    set incsearch       "增量式搜索
+    set ignorecase      "搜索忽略大小写
+
+    " 状态栏
+    set ruler           "显示光标状态
+    set number          "显示行号
+    set numberwidth=4   "行号宽度
+    "set laststatus=2   "始终显示状态行
+    set showcmd         "显示命令
+    set cmdheight=1     "设置命令行的高度
+    set cmdheight=1     "命令行高度
+
+
+    " 制表符和缩进
+    set tabstop=4
+    set shiftwidth=4
+    set smarttab		"删除连续4个空格
+    set expandtab		"用空格替换制表符
+    set cindent         "c/c++风格缩进
+    set autoindent      "o/O操作时复制新行
+    set smartindent     "智能缩进换行
+    set copyindent      "复制上次的缩进
+
+    " 插件
+    set wildmenu        "自动补全
+    set wildmode=list:longest
+
+
+    " 通用快捷键设计
+    "
+    " 1) 标签类
+    "^o新标签打开文件
+    nmap <C-o> :tabnew
+    "tab 向后切换
+    nmap <Tab> :tabn<CR>
+    "shift + tab 向后切换
+    nmap <S-Tab> :tabp<CR>
+
 
 endfunction
 
@@ -79,9 +124,9 @@ endfunction
 
 "config function of php file
 function s:filetype_php()
-	nmap <K> :!pman $<CR>
-	nmap <C-j> :!php -l %<CR>
-	nmap <C-p> :!php %<CR>
+    nmap <K> :!pman $<CR>
+    nmap <C-j> :!php -l %<CR>
+    nmap <C-p> :!php %<CR>
 
 endfunction
 
