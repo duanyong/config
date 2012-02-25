@@ -38,14 +38,17 @@ function s:basic_config()
     set whichwrap+=>,<,h,l          "添加h,l可以无聊移动
     set backspace=indent,eol,start  "删除键只在插入模式有用
 
+
     " 配色主题
     "set background=drak     "设置背景
     colorscheme desert      "采用配色主题
 
+
     " 文件相关
     set history=50          "命令的历史记录
     set autoread            "文件在外部修改，自动加载
-    set autochdir		    "文件目录设置为当前目录
+    set autochdir           "文件目录设置为当前目录
+    set autowrite           "自动写入绥冲区
     set ambiwidth=double    "开启特殊字符宽字符显示
     "set fileformat=unix
     "set fileencoding=utf-8
@@ -53,6 +56,13 @@ function s:basic_config()
     set fileencodings=utf-8,bgk     "采用编码
     set viminfo='10,\"100,:20,%,n~/.viminfo " 恢复上次文件打开位置
     au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
+
+
+    " vim使用鼠标
+    set mouse=a
+    set selection=exclusive
+    set selectmode=mouse,key
+
 
     " 禁用错误发声
     set noerrorbells	"关闭错误声音
@@ -62,6 +72,7 @@ function s:basic_config()
     "set hlsearch       "不高亮搜索的条目
     set incsearch       "增量式搜索
     set ignorecase      "搜索忽略大小写
+
 
     " 状态栏
     set ruler           "显示光标状态
@@ -76,12 +87,13 @@ function s:basic_config()
     " 制表符和缩进
     set tabstop=4
     set shiftwidth=4
-    set smarttab		"删除连续4个空格
-    set expandtab		"用空格替换制表符
+    set smarttab        "在行和段首使用制表符
+    set expandtab       "用空格替换制表符
     set cindent         "c/c++风格缩进
+    set copyindent      "复制上次的缩进
     set autoindent      "o/O操作时复制新行
     set smartindent     "智能缩进换行
-    set copyindent      "复制上次的缩进
+
 
     " 插件
     set wildmenu        "自动补全
