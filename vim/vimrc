@@ -70,7 +70,7 @@ function s:basic_config()
     set nocompatible    "禁用兼容模式
 
     "set hlsearch       "不高亮搜索的条目
-    set incsearch       "增量式搜索
+    set incsearch       "实时搜索
     set ignorecase      "搜索忽略大小写
 
 
@@ -85,8 +85,10 @@ function s:basic_config()
 
 
     " 制表符和缩进
-    set tabstop=4
-    set shiftwidth=4
+    set tabstop=4       "一个制表符四个空格
+    set softtabstop=4   "优先删除四个空格
+    set shiftwidth=4    ">>或<<移动四个空格
+    set nowrap          "粘贴时不自动换行
     set smarttab        "在行和段首使用制表符
     set expandtab       "用空格替换制表符
     set cindent         "c/c++风格缩进
@@ -104,7 +106,7 @@ function s:basic_config()
     "
     " 1) 标签类
     "^o新标签打开文件
-    nmap <C-o> :tabnew
+    nmap <C-o> :tabnew 
     "tab 向后切换
     nmap <Tab> :tabn<CR>
     "shift + tab 向后切换
@@ -126,11 +128,15 @@ endfunction
 
 "config function of js file
 function s:filetype_js()
+    "插入注释
+    iab /// ////////////////////////////////////////////////////////////////////////////////
 endfunction
 
 
 "config function of css file
 function s:filetype_css()
+    "插入注释
+    iab /// <!-- /////////////////////////////////////////////////////////////////////// //-->
 endfunction
 
 

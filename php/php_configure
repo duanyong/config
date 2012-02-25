@@ -1,0 +1,7 @@
+./configure 
+    \ --prefix=/usr/local/php
+    \ --enable-fpm
+    \ --enable-safe-mode
+    \ --enable-exif
+    \ --enable-zip
+    \ --enable-embedded-mysqli
