@@ -1,5 +1,7 @@
-./configure 
-    \--prefix=/usr/local/nginx 
-    \--with-pcre 
-    \--without-http_uwsgi_module 
-    \--without-http_scgi_module
+./configure \
+        --prefix=/usr/local/nginx \
+        --error-log-path=/var/log/nginx/nginx.log \
+        --pid-path=/var/run/nginx.pid \
+        --without-http_uwsgi_module \
+        --without-http_scgi_module \
+        --with-pcre

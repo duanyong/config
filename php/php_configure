@@ -1,7 +1,14 @@
-./configure 
-    \ --prefix=/usr/local/php
-    \ --enable-fpm
-    \ --enable-safe-mode
-    \ --enable-exif
-    \ --enable-zip
-    \ --enable-embedded-mysqli
+./configure \
+        --prefix=/usr/local/php \
+        --enable-fpm \
+        --enable-zip \
+        --enable-exif \
+        --enable-session \
+        --enable-sockets \
+        --enable-mbstring \
+        --enable-safe-mode \
+        --enable-embedded-mysqli \
+        --with-curl \
+        --with-mcrypt \
+        --with-mysql-sock \
+        --with-mysql=/usr/local/mysql
