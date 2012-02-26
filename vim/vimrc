@@ -1,5 +1,7 @@
-"   mac系统目录: ~/.vimrc
+" 简单基本的介绍：http://www.ibm.com/developerworks/cn/linux/l-tip-vim3/
+"
 " linux系统目录: ~/.vim/vimrc
+"   mac系统目录: ~/.vimrc
 "
 "
 " 注意事项：
@@ -37,6 +39,7 @@ function s:basic_config()
     set showmatch                   "显示匹配的括号
     set whichwrap+=>,<,h,l          "添加h,l可以无聊移动
     set backspace=indent,eol,start  "删除键只在插入模式有用
+    "set textwidth=80
 
 
     " 配色主题
@@ -88,7 +91,7 @@ function s:basic_config()
     set tabstop=4       "一个制表符四个空格
     set softtabstop=4   "优先删除四个空格
     set shiftwidth=4    ">>或<<移动四个空格
-    set nowrap          "粘贴时不自动换行
+    set wrap            "自动换行
     set smarttab        "在行和段首使用制表符
     set expandtab       "用空格替换制表符
     set cindent         "c/c++风格缩进
