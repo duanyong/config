@@ -37,9 +37,10 @@ function s:basic_config()
     filetype indent plugin on
     set linebreak                   "在单词处断行
     set showmatch                   "显示匹配的括号
+    set scrolloff=2                 "上下可视行数
     set whichwrap+=>,<,h,l          "添加h,l可以无聊移动
     set backspace=indent,eol,start  "删除键只在插入模式有用
-    "set textwidth=80
+    set textwidth=80
 
 
     " 配色主题
