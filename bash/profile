@@ -18,6 +18,10 @@ export PATH=/usr/local/nginx/sbin:$PATH
 #添加/usr/local/php/sbin目录
 export PATH=/usr/local/php/sbin:/usr/local/php/bin:$PATH
 
+#添加/usr/local/mysql目录
+export PATH=/usr/local/mysql/bin:$PATH
+
+
 #修改默认的终端提示符 duanyong@MacPro:/tmp$
 export PS1='\u@\h:\w\$ '
 

@@ -1,0 +1,9 @@
+./configure \
+        --prefix=/usr/local/mysql \
+        --enable-assembler \
+        --with-mysqld-ldflags=-all-static \
+        --with-client-ldflags=-all-static \
+        --with-unix-socket-path=/tmp/mysql.socket \
+        --with-charset=utf8 \
+        --with-collation=utf8_general_ci \
+        --with-extra-charsets=all 
