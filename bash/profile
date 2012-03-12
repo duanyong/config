@@ -15,6 +15,9 @@ export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 #添加/usr/local/nginx/sbin目录
 export PATH=/usr/local/nginx/sbin:$PATH
 
+#添加/usr/local/apache2/bin目录
+export PATH=/usr/local/apache2/bin:$PATH
+
 #添加/usr/local/php/sbin目录
 export PATH=/usr/local/php/sbin:/usr/local/php/bin:$PATH
 
