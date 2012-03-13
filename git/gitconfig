@@ -5,8 +5,8 @@
 	email 	= coderduan@gmail.com
 
 [color]
-    ui      = auto
-    log     = auto
+    	ui      = auto
+    	log     = auto
 	diff 	= auto
 	branch 	= auto
 	status 	= auto

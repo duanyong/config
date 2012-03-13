@@ -1,0 +1,56 @@
+# apt-cache search libtool gobjc++ pcre 
+
+#download apr and configure it
+./configure \
+  --prefix=/usr/local/apr
+  --enable-profile
+  --enable-threads
+  --disable-ipv6
+
+
+#download apr-iconv
+./configure \
+  --prefix=/usr/local/apr-iconv 
+  --with-apr=/usr/local/apr/bin/apr-1-config
+
+
+#download apr-util
+./configure \
+  --prefix=/usr/local/apr-util 
+  --with-apr=/usr/local/apr/bin/apr-1-config
+  --with-apr-iconv=/usr/local/apr-iconv/bin/apr-1-config
+  --with-mysql=/usr/local/mysql
+
+
+./configure \
+  --prefix=/usr/local/apache2 \
+  --enable-cache \
+  --enable-file-cache \
+  --enable-cache-disk \
+  --enable-so \
+  --enable-buffer \
+  --enable-request \
+  --enable-include \
+  --enable-charset-lite \
+  --enable-http \
+  --enable-session \
+  --enable-session-cookie \
+  --enable-static-htdigest \
+  --enable-static-rotatelogs \
+  --enable-static-logresolve \
+  --enable-static-htdbm \
+  --enable-static-ab \
+  --enable-static-checkgid \
+  --enable-static-htcacheclean \
+  --enable-static-httxt2dbm \
+  --enable-static-fcgistarter \
+  --enable-cgi \
+  --enable-vhost-alias \
+  --enable-userdir \
+  --enable-rewrite \
+  --with-included-apr \
+  --with-apr=/usr/local/apr/bin/apr-1-config \
+  --with-apr-util=/usr/local/apr-util/bin/apu-1-config \
+  --with-libxml2 \
+  --with-mpm=worker
+
