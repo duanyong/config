@@ -1,3 +1,4 @@
+#5.0 configure
 ./configure \
         --prefix=/usr/local/mysql \
         --enable-assembler \
@@ -7,3 +8,20 @@
         --with-charset=utf8 \
         --with-collation=utf8_general_ci \
         --with-extra-charsets=all 
+
+#5.5 configure
+
+sudo apt-get build-dep lib64tinfo5 libc6-amd64 libncurses5-dev -y
+
+cmake \
+	-DCMAKE_INSTALL_PREFIX=/usr/local/mysql \
+	-DMYSQL_UNIX_ADDR=/tmp/mysql.sock \
+	-DDEFAULT_CHARSET=utf8 \
+	-DDEFAULT_COLLATION=utf8_general_ci \
+	-DWITH_EXTRA_CHARSETS:STRING=utf8,gbk \
+	-DWITH_MYISAM_STORAGE_ENGINE=1 \
+	-DWITH_INNOBASE_STORAGE_ENGINE=1 \
+	-DWITH_READLINE=1 \
+	-DENABLED_LOCAL_INFILE=1
+make
+sudo make install

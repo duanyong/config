@@ -10,6 +10,7 @@
 
 
 #添加/opt/local/bin目录
+export PATH=./:$PATH
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 
 #添加/usr/local/nginx/sbin目录
