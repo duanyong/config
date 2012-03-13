@@ -1,0 +1,28 @@
+
+./configure \
+  --prefix=/usr/local/php \
+  --disable-ipv6  \
+  --enable-fpm \
+  --enable-sockets \
+  --enable-mod-charset \
+  --enable-zip \
+  --enable-bcmath \
+  --enable-exif \
+  --enable-sockets \
+  --enable-mbstring \
+  --enable-gd-native-ttf \
+  --enable-embedded-mysqli \
+  --enable-shared=PKGS \
+  --enable-static=PKGS \
+  --enable-fast-install=PKGS
+  --with-mcrypt \
+  --with-litespeed \
+  --with-pcre-dir \
+  --with-tsrm-pthreads \
+  --with-mysql=/usr/local/mysql \
+  --with-openssl-dir=/usr/local/openssl \
+  --with-apache=/usr/local/apache2
+
+sudo mv $PHP_PATH/php/man $PHP_PATH/php/fpm ../
+sudo rm -rf $PHP_PATH/php
+

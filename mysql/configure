@@ -25,3 +25,6 @@ cmake \
 	-DENABLED_LOCAL_INFILE=1
 make
 sudo make install
+
+sudo useradd mysql
+sudo groupadd -g mysql mysql
