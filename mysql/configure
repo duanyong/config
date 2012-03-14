@@ -11,11 +11,11 @@
 
 #5.5 configure
 
-sudo apt-get build-dep lib64tinfo5 libc6-amd64 libncurses5-dev -y
+sudo apt-get build-dep lib64tinfo5 libc6-amd64 libncurses5-dev bison -y
 
 cmake \
 	-DCMAKE_INSTALL_PREFIX=/usr/local/mysql \
-	-DMYSQL_UNIX_ADDR=/tmp/mysql.sock \
+	-DMYSQL_UNIX_ADDR=/tmp/mysql.socket \
 	-DDEFAULT_CHARSET=utf8 \
 	-DDEFAULT_COLLATION=utf8_general_ci \
 	-DWITH_EXTRA_CHARSETS:STRING=utf8,gbk \
@@ -26,5 +26,7 @@ cmake \
 make
 sudo make install
 
-sudo useradd mysql
-sudo groupadd -g mysql mysql
+1, sudo useradd -U -M -s /usr/false mysql
+2, sudo mkdir /var/log/mysql
+3, sudo chown -R mysql:mysql /var/log/mysql $MYSQL_PATH/data
+4, sudo chown -R $MYSQL_PATH/scripts/mysql_install_db
