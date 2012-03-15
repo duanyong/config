@@ -55,9 +55,11 @@ function s:basic_config()
     set autowrite           "自动写入绥冲区
     set ambiwidth=double    "开启特殊字符宽字符显示
     "set fileformat=unix
-    "set fileencoding=utf-8
+    "set encoding                    "显示文件编码
+    set encoding=utf-8              "默认保存为utf8编码
+    set fileencoding=utf-8          "保存为utf8编码
     set fileformats=unix,dos,mac    "支持所有文件系统
-    set fileencodings=utf-8,bgk     "采用编码
+    set fileencodings=ucs-bom,utf-8,bgk,cp936     "采用编码
     set viminfo='10,\"100,:20,%,n~/.viminfo " 恢复上次文件打开位置
     au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
 
