@@ -15,7 +15,6 @@
 *.shtml
 
 # aa.js, cc.css
-*.js
 *.css
 !dev.*.js
 !dev.*.css

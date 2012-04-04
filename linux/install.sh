@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #
-sudo apt-get install -y fcitx-table-wubi git mysql-server mysql-client php5 php5-cli php5-cgi php5-fpm php5-curl php5-mysql php5-memcache php-apc php-pear nginx ssh tree
+sudo apt-get install -y fcitx-table-wubi git mysql-server mysql-client php5 php5-cli php5-cgi php5-fpm php5-curl php5-mysql php5-memcache php-apc php-pear nginx ssh tree samba smbfs
 
 #pman
 sudo pear channel-update doc.php.net
