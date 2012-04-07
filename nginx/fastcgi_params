@@ -20,3 +20,20 @@ fastcgi_param  SERVER_NAME        $server_name;
 
 # PHP only, required if PHP was built with --enable-force-cgi-redirect
 # fastcgi_param  REDIRECT_STATUS    200;
+
+# (start) add by duanyong for sina at 2012-04-04
+
+fastcgi_param  SINASRV_DB4_USER   root;
+fastcgi_param  SINASRV_DB4_PASS   "";
+fastcgi_param  SINASRV_DB4_HOST   localhost;
+fastcgi_param  SINASRV_DB4_PORT   3306;
+fastcgi_param  SINASRV_DB4_NAME   test;
+
+fastcgi_param  SINASRV_DB4_USER_R root;
+fastcgi_param  SINASRV_DB4_PASS_R "";
+fastcgi_param  SINASRV_DB4_HOST_R localhost;
+fastcgi_param  SINASRV_DB4_PORT_R 3306;
+fastcgi_param  SINASRV_DB4_NAME_R test;
+
+
+# (end) add by duanyong at 2012-04-04
