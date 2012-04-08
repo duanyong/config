@@ -21,6 +21,17 @@ sudo cat source/sources.list > /etc/apt/sources.list
 sudo apt-get update && sudo apt-get upgrade -y
 
 
+#压缩与解压软件
+sudo apt-get install -y unace unrar zip unzip p7zip-full p7zip-rar sharutils rar uudeview mpack lha arj cabextract file-roller
+
+#多媒体软件
+sudo wget –output-document=/etc/apt/sources.list.d/medibuntu.list http://www.medibuntu.org/sources.list.d/$(lsb_release -cs).list && sudo apt-get –quiet update && sudo apt-get –yes –quiet –allow-unauthenticated install medibuntu-keyring && sudo apt-get –quiet update
+sudo apt-get install app-install-data-medibuntu apport-hooks-medibuntu
+
+#flash
+sudo add-apt-repository ppa:sevenmachines/flash
+sudo apt-get update && sudo apt-get install flashplugin64-installer
+
 
 #use fcitx
 sudo apt-get install -y fcitx-table-wubi && im-switch -s fcitx
@@ -38,7 +49,6 @@ pear install MDB2_Driver_mysql-1.5.0b3
 #开始配置系统
 
 #1、修改系统字体
-sudo apt-get install -y unrar zip p7zip
 cd fonts && tar -jxf msyh.ttf.jz2
 
 cd /usr/share/fonts/truetype/ && sudo mkdir msyh && sudo mv msyh.ttf /usr/share/fonts/truetype/msyh &&
@@ -46,5 +56,7 @@ cd /usr/share/fonts/truetype/ && sudo mkdir msyh && sudo mv msyh.ttf /usr/share/
   
 #sudo apt-get build-dep -y autoconf libtool gobjc++ libxml2-dev zlib1g-dev
 
+#多媒体功能
+sudo apt-get install medibuntu
 
 
