@@ -35,6 +35,7 @@ function s:basic_config()
 
     syntax on
     filetype indent plugin on
+    set noswapfile          
     set linebreak                   "在单词处断行
     set showmatch                   "显示匹配的括号
     set scrolloff=2                 "上下可视行数

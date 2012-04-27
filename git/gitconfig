@@ -5,12 +5,12 @@
 	email 	= coderduan@gmail.com
 
 [color]
-    	ui      = auto
-    	log     = auto
-	diff 	= auto
-	branch 	= auto
-	status 	= auto
-
+    ui      = auto
+    log     = auto
+    diff 	= auto
+    branch 	= auto
+    status 	= auto
+#
 #[color "branch"]
 #    local   = yellow
 #    remote  = green
@@ -40,3 +40,7 @@
 #    lola    = log --graph --decorate --pretty=oneline --abbrev-commit --all
 #    # Show files ignored by git:
 #    ign     = ls-files -o -i --exclude-standard
+
+[core]
+    autocrlf    = true
+    whitespace  = cr-at-eol
