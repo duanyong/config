@@ -42,5 +42,5 @@
 #    ign     = ls-files -o -i --exclude-standard
 
 [core]
-    autocrlf    = true
+    #autocrlf    = true
     whitespace  = cr-at-eol
