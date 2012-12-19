@@ -44,3 +44,4 @@
 [core]
     #autocrlf    = true
     whitespace  = cr-at-eol
+    quotepath   = false

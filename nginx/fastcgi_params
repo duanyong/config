@@ -19,13 +19,13 @@ fastcgi_param  SERVER_PORT        $server_port;
 fastcgi_param  SERVER_NAME        $server_name;
 
 fastcgi_param  SINASRV_DB4_USER   root;
-fastcgi_param  SINASRV_DB4_PASS   "";
+fastcgi_param  SINASRV_DB4_PASS   a;
 fastcgi_param  SINASRV_DB4_HOST   localhost;
 fastcgi_param  SINASRV_DB4_PORT   3306;
 fastcgi_param  SINASRV_DB4_NAME   test;
 
 fastcgi_param  SINASRV_DB4_USER_R root;
-fastcgi_param  SINASRV_DB4_PASS_R "";
+fastcgi_param  SINASRV_DB4_PASS_R a;
 fastcgi_param  SINASRV_DB4_HOST_R localhost;
 fastcgi_param  SINASRV_DB4_PORT_R 3306;
 fastcgi_param  SINASRV_DB4_NAME_R test;
@@ -35,9 +35,6 @@ fastcgi_param  SINASRV_CACHE_DIR  "/tmp/";
 fastcgi_param  SINASRV_CACHE_URL  "http://all.vic.sina.con.cn/cache";
 
 fastcgi_param  SINASRV_MEMCACHED_KEY_PREFIX "_sing_";
-
-#test
-fastcgi_param  SHFRAMEWORK_DIR  "/home/duanyong/workspace/sina/SHFramework";
 
 
 # PHP only, required if PHP was built with --enable-force-cgi-redirect

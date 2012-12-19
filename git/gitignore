@@ -11,11 +11,5 @@
 ?.php
 ?.tpl
 
-*.html
-*.shtml
 
 # aa.js, cc.css
-*.css
-!dev.*.js
-!dev.*.css
-
