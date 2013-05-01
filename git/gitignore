@@ -8,6 +8,10 @@
 *.swo
 *.swp
 
+sql.*
+
+fastcgi_params
+
 ?.php
 ?.tpl
 

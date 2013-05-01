@@ -45,3 +45,4 @@
     #autocrlf    = true
     whitespace  = cr-at-eol
     quotepath   = false
+	excludesfile = ~/.gitignoreglobal
