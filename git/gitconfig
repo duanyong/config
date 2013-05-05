@@ -11,21 +11,21 @@
     branch 	= auto
     status 	= auto
 #
-#[color "branch"]
-#    local   = yellow
-#    remote  = green
-#    current = yellow reverse
+[color "branch"]
+    local   = yellow
+    remote  = green
+    current = yellow reverse
 
-#[color "diff"]
-#    old     = red bold
-#    new     = green bold
-#    meta    = yellow bold
-#    frag    = magenta bold
+[color "diff"]
+    old     = red bold
+    new     = green bold
+    meta    = yellow bold
+    frag    = magenta bold
 
-#[color "status"]
-#    added       = yellow
-#    changed     = green
-#    untracked   = cyan
+[color "status"]
+    added       = yellow
+    changed     = green
+    untracked   = cyan
 
 [alias]
     ls      = ls-files
