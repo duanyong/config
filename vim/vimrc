@@ -154,6 +154,7 @@ function s:filetype_php()
     nmap <C-j> :!php -l %<CR>
     nmap <C-p> :!php %<CR>
 
+
 endfunction
 
 
@@ -173,6 +174,19 @@ endfunction
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 call s:basic_config()
+
+
+function AddSinaComment()
+    call setline(0,"<php?")
+    call append(2,"/**")
+    call append(2," * " . expand("%"))
+    call append(3," *")
+    call append(4," * @package      ")
+    call append(5," * @copyright    copyright(".strftime("%Y").") sina.com.cn all rights reserved")
+    call append(6," * @author       xuyong3 <xuyong3@staff.sina.com.cn>")
+    call append(7," * @version:     ".strftime("%Y-%m-%d"))
+    call append(8," */")
+endf
 
 
 autocmd FileType c call s:filetype_c()

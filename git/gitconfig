@@ -55,4 +55,6 @@
     #autocrlf    = true
     whitespace      = cr-at-eol
     quotepath       = false
-    excludesfile    = ~/.gitignoreglobal
+
+# 忽略文件，需要修改路径
+	excludesfile = /home/duanyong/.gitignore
